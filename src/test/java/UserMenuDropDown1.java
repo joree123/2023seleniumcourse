@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 
 import testResources.BasicTest;
 
-public class UserMenuDropDown {
+public class UserMenuDropDown1 {
 WebDriver driver;
 	@BeforeMethod
 	public void launch() {
@@ -32,7 +32,7 @@ WebDriver driver;
 		System.out.println(driver.getCurrentUrl());
 		Thread.sleep(6000);
 		String actualText=driver.findElement(By.id("userNav")).getAttribute("title");
-		String expectedText="User menu for jorre Ghosh";
+		String expectedText="User menu for joree Ghosh";
 		//Assert.assertEquals(actualText, expectedText);
 		
 		driver.findElement(By.id("userNav")).click();
@@ -51,7 +51,7 @@ WebDriver driver;
 	
 	
 	//String actualTitle=driver.getTitle();
-	//String expectedTitle="User: jorre Ghosh ~ Salesforce - Developer Edition";
+	//String expectedTitle="User: joree Ghosh ~ Salesforce - Developer Edition";
 	//Assert.assertEquals(actualTitle, expectedTitle);
 	driver.findElement(By.cssSelector("img[title='Edit Profile']")).click();
 	
