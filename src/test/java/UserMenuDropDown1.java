@@ -90,11 +90,17 @@ WebDriver driver;
 		WebElement image=driver.findElement(By.id("displayBadge"));
 		Actions a=new Actions(driver);
 		a.moveToElement(image).build().perform();
+		driver.findElement(By.cssSelector("a#uploadLink")).click();
+		Thread.sleep(5000);
+		driver.switchTo().frame(driver.findElement(By.cssSelector("iframe#uploadPhotoContentId")));
+		driver.findElement(By.cssSelector("input.fileInput")).sendKeys("C:\\Users\\ashvi\\OneDrive\\Pictures\\Roblox\\RobloxScreenShot20220529_222450116.png");
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//input[@type='submit'][2]")).click();
+		Thread.sleep(5000);
 		
-		
-		
-		//driver.findElement(By.id("chatterUploadFileAction")).click()
-		//driver.findElement(By.id("chatterUploadFileAction")).click()
+		Actions crop = new Actions(driver);
+		crop.clickAndHold().moveByOffset(30, 50).release().build().perform();
+		driver.findElement(By.xpath("//input[@value='Save']")).click();
 	}
 	
 

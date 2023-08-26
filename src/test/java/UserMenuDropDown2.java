@@ -97,7 +97,7 @@ public class UserMenuDropDown2 {
 	driver.switchTo().window(parentId);
 	Thread.sleep(5000);
 	
-	
+	driver.quit();
 	
 	}
 }
