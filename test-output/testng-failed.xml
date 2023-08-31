@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="UserMenuDropDown1">
+      <class name="accountsTests.MergeAccount">
         <methods>
-          <include name="launch"/>
-          <include name="login"/>
+          <include name="mergeUserAccounts"/>
+          <include name="setDriver"/>
+          <include name="closeDriver"/>
         </methods>
-      </class> <!-- UserMenuDropDown1 -->
+      </class> <!-- accountsTests.MergeAccount -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
